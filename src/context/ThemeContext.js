@@ -22,13 +22,15 @@ export const ThemeProvider = (props) => {
   }, [darkmode]);
 
   const applyTheme = theme => {
-  const root = document.getElementsByTagName('html')[0];
-  root.style.cssText = theme.join(';');
+    const root = document.getElementsByTagName('html')[0];
+    root.style.cssText = theme.join(';');
 }
 
   const toggleTheme = () => {
-  setDarkmode(!darkmode);
-  window.localStorage.setItem('darkTheme', !darkmode);
+    const body = document.getElementsByTagName('body')[0];
+    body.style.cssText = 'transition: background .5s ease';
+    setDarkmode(!darkmode);
+    window.localStorage.setItem('darkTheme', !darkmode);
 };
 
 

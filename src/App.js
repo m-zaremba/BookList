@@ -1,12 +1,18 @@
 import React from 'react';
+import {BookContextProvider} from './context/BookContext';
 import {Header} from './components/Header';
+import {BookList} from './components/Booklist';
+import {NewBookForm} from './components/NewBookForm';
 
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <h1>Test</h1>
+      <BookContextProvider>
+        <Header />
+        <BookList />
+        <NewBookForm />
+      </BookContextProvider>
     </div>
   );
 }

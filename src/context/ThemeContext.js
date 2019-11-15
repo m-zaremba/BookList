@@ -35,7 +35,7 @@ export const ThemeProvider = (props) => {
 
 
   return <ThemeContext.Provider value={{
-    darkTheme, toggleTheme,
+    darkTheme, toggleTheme, darkmode
   }}>
     {props.children}
   </ThemeContext.Provider>
@@ -43,9 +43,9 @@ export const ThemeProvider = (props) => {
 
 const defaultTheme = [
   '--text: rgb(0, 0, 0)',
-  '--bodyBackground: rgb(22, 167, 153)',
-  '--headerBackground: rgb(255, 139, 20)',
-  '--listElementBackground: rgb(255, 157, 85)',
+  '--bodyBackground: rgb(255, 255, 255)',
+  '--headerBackground: rgb(130, 130, 130)',
+  '--listElementBackground: rgb(176, 176, 176)',
 ];
 
 const darkTheme = [

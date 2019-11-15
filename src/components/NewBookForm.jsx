@@ -14,12 +14,16 @@ export const NewBookForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="book title" value={title}
-        onChange={(e) => setTitle(e.target.value)} required />
-      <input type="text" placeholder="author's name" value={author}
-        onChange={(e) => setAuthor(e.target.value)} required />
-      <input type="submit" value="add book" />
-    </form>
+    <section className="add-book-form">
+      <span>Feed the Bookworm</span>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="book title" value={title}
+          onChange={(e) => setTitle(e.target.value)} required />
+        <input type="text" placeholder="author's name" value={author}
+          onChange={(e) => setAuthor(e.target.value)} required />
+        <input type="submit" value="add book" />
+      </form>
+    </section>
+
   );
 }

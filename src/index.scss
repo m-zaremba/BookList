@@ -1,0 +1,110 @@
+:root {
+  --text: rgb(0, 0, 0);
+  --bodyBackground: rgb(255, 255, 255);
+  --headerBackground: rgb(130, 130, 130);
+  --listElementBackground: rgb(176, 176, 176);
+}
+
+*  {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+}
+
+// * :not(body) { transition: all .5s ease; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bodyBackground);
+}
+
+.App {
+  color: var(--text);
+  // margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+//HEADER STYLE
+
+header {
+  margin: 0 auto;
+  padding: 10px 10px;
+  background-color: var(--headerBackground);
+  text-align: center;
+
+  h1, p {
+    color: var(--text);
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  svg {
+    font-size: 40px;
+  }
+}
+
+//BOOKLIST STYLE
+
+.book-list {
+  // width: 100%;
+
+
+  li {
+    margin: 5px auto;
+    list-style: none;
+    padding: 10px 20px;
+
+    &:nth-child(even) {
+      background-color: var(--listElementBackground);
+    }
+
+    &:nth-child(odd) {
+      background-color: green;
+    }
+  }
+
+  .empty {
+    margin: 5px auto;
+    padding: 10px 20px;
+    text-align: center;
+
+    svg {
+      display: block;
+      font-size: 5rem;
+    }
+  }
+
+}
+
+//ADD BOOK FORM STYLE
+
+.add-book-form {
+  text-align: center;
+  margin-top: 5px;
+  background-color: #7c7c7c;
+  padding: 10px 10px;
+}
+
+input[type='text']{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: #eee;
+  color: #000;
+  border: 0;
+}
+input[type='submit']{
+  margin: 10px auto;
+  background: #ggg;
+  border: 0;
+  padding: 6px 20px;
+  display: block;
+}

@@ -1,8 +1,10 @@
 :root {
-  --text: rgb(0, 0, 0);
+  --text: #203d3c;
   --bodyBackground: rgb(255, 255, 255);
   --headerBackground: rgb(130, 130, 130);
-  --listElementBackground: rgb(176, 176, 176);
+  --oddListElementBackground: rgba(255, 218, 91, 0.6);
+  --evenListElementBackground: rgba(255, 218, 91, 0.77);
+  --addBookFormBackground: rgb(142, 51, 0);
 }
 
 *  {
@@ -47,44 +49,83 @@ header {
     color: var(--text);
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
   p {
-    margin-bottom: 10px;
+    margin: 10px auto;
   }
 
   svg {
     font-size: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
 //BOOKLIST STYLE
 
 .book-list {
-  margin-top: 133px;
+  margin-top: 153px;
+
+  ul {
+    width: 96%;
+  }
 
 
   li {
     margin-bottom: 5px;
     list-style: none;
     padding: 10px 20px;
+    position: relative;
 
     &:nth-child(even) {
-      background-color: var(--listElementBackground);
+      background-color: var(--evenListElementBackground);
     }
 
     &:nth-child(odd) {
-      background-color: green;
+      background-color: var(--oddListElementBackground);
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: line-through;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      font-size: 2rem;
     }
   }
 
   .empty {
+    height: calc(100vh - 138px);
     margin: 5px auto;
     padding: 10px 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     svg {
       display: block;
-      font-size: 5rem;
+      font-size: 10rem;
     }
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .author {
+    font-size: 1.2rem;
   }
 
 }
@@ -97,7 +138,7 @@ header {
   max-width: 700px;
   text-align: center;
   margin-top: 5px;
-  background-color: #7c7c7c;
+  background-color: var(--addBookFormBackground);
   padding: 30px 10px;
   position: fixed;
   transition: transform .5s;
@@ -126,6 +167,10 @@ header {
     svg {
       font-size: 2rem;
       margin-top: 6px;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

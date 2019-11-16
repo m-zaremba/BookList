@@ -1,4 +1,4 @@
-import React, {createContext, useState, useLayoutEffect} from 'react';
+import React, { createContext, useState, useLayoutEffect } from 'react';
 
 export const ThemeContext = createContext({
   isDarkmodeActive: false,
@@ -37,20 +37,24 @@ export const ThemeProvider = (props) => {
   return <ThemeContext.Provider value={{
     darkTheme, toggleTheme, darkmode
   }}>
-    {props.children}
+    { props.children }
   </ThemeContext.Provider>
 }
 
 const defaultTheme = [
-  '--text: rgb(0, 0, 0)',
+  '--text: #203d3c',
   '--bodyBackground: rgb(255, 255, 255)',
-  '--headerBackground: rgb(130, 130, 130)',
-  '--listElementBackground: rgb(176, 176, 176)',
+  '--headerBackground: #FFDA5B',
+  '--oddListElementBackground: rgba(255, 218, 91, 0.54)',
+  '--evenListElementBackground: rgba(255, 218, 91, 0.65)',
+  '--addBookFormBackground: #FFDA5B',
 ];
 
 const darkTheme = [
-  '--text: yellow',
-  '--bodyBackground: black',
-  '--headerBackground: rgb(26, 26, 26)',
-  '--listElementBackground: rgb(38, 38, 38)',
+  '--text: rgb(212, 212, 212)',
+  '--bodyBackground: rgb(56, 56, 56)',
+  '--headerBackground: rgb(27, 27, 27)',
+  '--oddListElementBackground: rgba(0, 0, 0, 0.44)',
+  '--evenListElementBackground: rgba(0, 0, 0, 0.65)',
+  '--addBookFormBackground: rgb(27, 27, 27)',
 ]

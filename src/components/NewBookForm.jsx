@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { BookContext } from '../context/BookContext';
-import {GiSecretBook} from 'react-icons/gi';
+import { GiSecretBook } from 'react-icons/gi';
 
 export const NewBookForm = () => {
   const { dispatch } = useContext(BookContext);
@@ -8,7 +8,6 @@ export const NewBookForm = () => {
   const [author, setAuthor] = useState('');
   const [showForm, setShowForm] = useState(false);
 
-  console.log(!showForm);
 
   const handleSubmit = (e) => {
     e.preventDefault();

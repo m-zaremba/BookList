@@ -1,12 +1,12 @@
-import React, {useContext} from 'react';
-import {ThemeContext} from '../context/ThemeContext';
-import {BookContext} from '../context/BookContext';
-import {WiSunrise, WiSunset} from 'react-icons/wi';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+import { BookContext } from '../context/BookContext';
+import { WiSunrise, WiSunset } from 'react-icons/wi';
 
 export const Header = () => {
 
-  const {toggleTheme, darkmode} = useContext(ThemeContext);
-  const {books} = useContext(BookContext);
+  const { toggleTheme, darkmode } = useContext(ThemeContext);
+  const { books } = useContext(BookContext);
 
   return (
     <header>

@@ -9,6 +9,7 @@
   margin: 0 auto;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 // * :not(body) { transition: all .5s ease; }
@@ -27,15 +28,20 @@ body {
   // margin: 0 auto;
   width: 100%;
   max-width: 700px;
+
 }
 
 //HEADER STYLE
 
 header {
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   padding: 10px 10px;
   background-color: var(--headerBackground);
   text-align: center;
+  position: fixed;
+  top: 0;
 
   h1, p {
     color: var(--text);
@@ -53,11 +59,11 @@ header {
 //BOOKLIST STYLE
 
 .book-list {
-  // width: 100%;
+  margin-top: 133px;
 
 
   li {
-    margin: 5px auto;
+    margin-bottom: 5px;
     list-style: none;
     padding: 10px 20px;
 
@@ -86,10 +92,42 @@ header {
 //ADD BOOK FORM STYLE
 
 .add-book-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
   text-align: center;
   margin-top: 5px;
   background-color: #7c7c7c;
-  padding: 10px 10px;
+  padding: 30px 10px;
+  position: fixed;
+  transition: transform .5s;
+  bottom: -219px;
+
+  &.invisible {
+    transform: translateY(0);
+  }
+
+  &.visible {
+    transform: translateY(-219px);
+
+  }
+
+  &__show-button {
+    width: 80px;
+    height: 60px;
+    border-top-left-radius: 160px;
+    border-top-right-radius: 160px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: inherit;
+
+    svg {
+      font-size: 2rem;
+      margin-top: 6px;
+    }
+  }
 }
 
 input[type='text']{

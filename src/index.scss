@@ -79,7 +79,10 @@ header {
   li {
     margin-bottom: 5px;
     list-style: none;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 45px;
     position: relative;
 
     &:nth-child(even) {

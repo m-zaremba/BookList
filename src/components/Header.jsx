@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { BookContext } from '../context/BookContext';
-import { WiSunrise, WiSunset } from 'react-icons/wi';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 export const Header = () => {
 
@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <header>
-      {darkmode ? <WiSunrise onClick={() => toggleTheme()}/> : <WiSunset onClick={() => toggleTheme()}/>}
+      {darkmode ? <FiSun onClick={() => toggleTheme()}/> : <FiMoon onClick={() => toggleTheme()}/>}
       <h1>Bookworm list</h1>
       {(books.length === 1) ? <p>Only {books.length} book to finish? You can surely do better!</p>
       :

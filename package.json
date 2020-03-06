@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-icons": "^3.8.0",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.4.0",
     "uuid": "^3.3.2"
   },
   "scripts": {
@@ -30,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }
